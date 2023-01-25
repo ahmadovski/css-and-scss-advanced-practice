@@ -1,0 +1,34 @@
+.feature-box {
+   
+    font-size: 1.6rem;
+    background-color: rgba($color-grey-light-1, $alpha: .8) ;
+    padding:  2.5rem;
+    border-radius: 2px;
+    box-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: .2);
+    transition: $default-transition;
+    will-change: transform; // this is for performance reasons for weak systems!!
+
+    @include respond(tab-port) {
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 4rem;
+    }
+    @include respond(phone) {
+        width: 60%;
+        padding-bottom: 6rem;
+    }
+
+    
+    .icon {
+        display: inline-block;
+        font-size: 6rem;
+        margin-top: 2.5rem;
+        margin-bottom: .5rem;
+
+        @include gradient-text-h-green;
+    }
+    
+    &:hover {
+        transform: translateY(-4%) scale(1.05);
+    }
+}

@@ -1,0 +1,29 @@
+//colors
+$primary-color:#7ed56f;
+$primary-color-second:#28b485;
+$color-white:#fff;
+$color-grey-light-1:  #f7f7f7;
+$color-grey:#777;
+$color-grey-2:rgb(148, 148, 148);
+$color-grey-dark:#333;
+$color-black:#000;
+
+//gradient
+$gradient-h-green :linear-gradient(
+    to left,
+    $primary-color, 
+    $primary-color-second);
+
+
+//measurments
+$container-row-width: 114rem;
+$grid-vertical-gap: 9rem;
+$grid-vertical-gap-small: 6rem;
+$grid-horizantal-gap: 5rem;
+$grid-horizantal-gap-small: 2.5rem;
+
+//font related 
+$default-font-size: 1.6rem;
+
+//transition 
+$default-transition : all .2s;

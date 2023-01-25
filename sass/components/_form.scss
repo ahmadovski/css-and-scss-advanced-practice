@@ -1,0 +1,129 @@
+.form {
+    width: 50%;
+    padding: 5rem;
+    
+    &__group {
+        position: relative;
+        margin-bottom: 5rem;
+
+    }
+
+    &__input {
+        //input does not inherit font
+        font-family: inherit;
+        
+        font-size: 1.6rem;
+        color: $color-grey;
+        
+        //because when animated moves a bit so we give it a transparent brder
+        border: 3px solid transparent;
+        border-radius: 3px;
+        background-color: rgba($color: $color-white, $alpha: .85);
+        width: 85%;
+        padding: 1.5rem;
+        transition: all .3s;
+
+        &::placeholder {
+            color: $color-grey-2;
+        }
+
+
+        &:focus {
+            outline: none;
+            border-bottom-color: $primary-color;
+            box-shadow: 0 .5rem 1.5rem rgba($color: #000000, $alpha: 0.1);
+
+            &:invalid {
+                border-bottom-color: orangered;
+            }
+
+        }
+
+        &:valid {
+            background-color: $color-white ;
+        }
+
+        & + .form__label {
+            position: absolute;
+            left: 1rem;
+            top: 80%;
+            font-size: 1.6rem;
+            transition: $default-transition;
+            transform: translateY(-50%);
+            opacity: 0;
+    
+        }
+
+        //this is for when user starts typing
+        &:not(:placeholder-shown) + .form__label  {
+            font-weight: 700;
+            opacity: 1;
+            transform: translateY(50%);
+
+        }
+      
+    }
+
+
+    &__radio {
+        position: relative;
+        display: inline-block;
+        width: 49%;
+        
+
+        .radio {
+
+            &__input {
+                display: none;
+
+                &:checked ~ .radio__label .radio__btn::after {
+                    opacity: 1;
+                }
+
+            }
+        
+            &__label {
+                padding-left: 4rem;
+                font-size: $default-font-size;
+                text-transform: capitalize;
+                cursor: pointer;
+        
+            }
+        
+            &__btn {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 3rem;
+                width: 3rem;
+                border: .5rem solid $primary-color;
+                border-radius: 50%;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1.4rem;
+                    width: 1.4rem;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% , -50%);
+                    opacity: 0;
+        
+                }
+
+
+
+
+        }
+    }
+    
+    }
+
+
+  
+    
+    
+}

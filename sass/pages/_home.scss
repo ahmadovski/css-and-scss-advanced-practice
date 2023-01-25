@@ -1,0 +1,92 @@
+.about {
+    background-color:$color-grey-light-1;
+    padding: 25rem 0 15rem;
+    margin-top: -20vh;
+    overflow: hidden;
+    height: fit-content;
+
+    @include respond(phone) {
+        padding: 20rem 0 5rem;
+    }
+}
+
+.features-section {
+    position: relative;
+    background-color: $color-grey-light-1;
+    overflow: hidden;
+
+
+    &__inner-container {
+
+        //this is for setting background
+        background:linear-gradient(to bottom right,
+        rgba($primary-color, 0.8),
+        rgba($primary-color-second, 0.8)),
+        url(../img/nat-10.jpg);
+        background-size: cover;
+        background-position: top;
+        background-attachment: fixed;
+        height: max-content;
+        padding: 20rem 0 30rem;
+        clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+        
+        @include respond(tab-land) {
+            padding-bottom: 15rem;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+        }
+        @include respond(phone) {
+            padding: 18rem 0 10rem;
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+
+        }
+
+    }
+
+}
+
+.tours-section {
+    padding: 8rem 0 20rem;
+    background-color: $color-grey-light-1;
+    overflow: hidden;
+    // height: 120vh;
+    // dont give it a height use padding, overflows when gets shrunk
+}
+
+.stories-section {
+    background-color: $color-grey-light-1;
+    padding: 20rem 0 15rem;
+    overflow: hidden;
+
+}
+.booking-section {
+    background-image: linear-gradient(to bottom right, $primary-color,$primary-color-second );
+    padding: 20rem 0 ;
+    overflow: hidden;
+
+}
+
+.book {
+    background-image: 
+        linear-gradient(105deg,
+        rgba($color-white,.9) 0%,
+        rgba($color-white,.9) 50%,
+        transparent 50%),
+        url(/img/nat-1-large.jpg);
+        
+
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    box-shadow: 0 0 2rem rgba($color: #000000, $alpha: .2);
+
+
+}
+.footer-section {
+    background-color: $color-grey-dark;
+    padding: 10rem 0 ;
+    overflow: hidden;
+
+}
+

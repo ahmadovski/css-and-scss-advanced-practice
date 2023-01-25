@@ -1,0 +1,107 @@
+.story {
+    position: relative;
+    // height: 25rem;
+    width: 75%;
+    margin: 0 auto;
+    padding: 6rem;
+
+    @include clearFix ;
+
+    // &--1 {
+    //     margin-bottom: 2rem;
+    // }
+
+
+    &__skewed-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-white;
+        border-radius: 3px;
+        box-shadow: 0 0 2rem rgba($color: #000000, $alpha: .2);
+        
+        transform: skewX(-12deg) ;
+
+
+    }
+
+    &__shape {
+        position: relative;
+        
+        height: 13rem;
+        width: 13rem;
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        float: left;
+    }
+
+    &__picture {
+        height: 100%;
+        transform: translateX(-15%) scale(1.1);
+        transition: all .65s ease;
+
+    }
+
+    &__caption {
+        position: absolute;
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $color-white;
+        backface-visibility: hidden;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50% ,50%);
+        transition: all .65s ease;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        transform: translateX(1.5rem);
+        
+    }
+
+    &:hover{
+        .story__caption {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+    
+        }
+        .story__picture {
+            transform: translateX(-15%) scale(1);
+            filter: blur(3px) brightness(85%);
+        }
+
+    } 
+    
+
+    // &__pic-box {
+    //     // border: 2px solid red;
+    //     width:30%;
+    //     height: 75%;
+    //     float: left;
+    //     // background-color: purple;
+    //     clip-path: circle(25% at 50% 50%);
+    //     overflow: hidden;
+        
+
+        
+    //     // .story__picture--1 {
+    //     //     width: 100%;
+    //     //     height: 100%;
+    //     //     background: url(/img/nat-8.jpg);
+    //     //     background-size: cover;
+    //     //     background-position: center;
+    
+    //     // }
+    // }
+
+
+}
