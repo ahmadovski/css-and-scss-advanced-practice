@@ -4,7 +4,9 @@
   "description": "landing page for natours website",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass sass/main.scss css/styles.css -w"
+    "compile:sass": "sass sass/main.scss css/styles.css -w",
+    "live-server": "live-server",
+    "start": " npm run compile:sass & npm run live-server"
   },
   "repository": {
     "type": "git",
@@ -16,8 +18,8 @@
     "url": "https://github.com/ahmadovski/css-and-scss-advanced-practice/issues"
   },
   "homepage": "https://github.com/ahmadovski/css-and-scss-advanced-practice#readme",
-  "dependencies": {},
   "devDependencies": {
+    "live-server": "^1.2.2",
     "sass": "^1.57.1"
   }
 }
